@@ -4,11 +4,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
+gem 'travis'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 
 gem 'pg'
 
 gem 'dotenv-rails', require: 'dotenv/rails-now'
+gem 'rexml', '~> 3.2', '>= 3.2.4'
 # Use sqlite3 as the database for Active Record
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
@@ -57,3 +59,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "bundler", "~> 2.2"
