@@ -1,0 +1,18 @@
+<div>
+<table id="user-table">
+<tr >
+<th >Id</th>
+<th >Name</th>
+<th >Occupation</th>
+</tr>
+<tbody>
+<% @users.each do |user| %>
+<tr>
+  <td><%=user.id%></td>
+  <td><%=user.name%></td>
+  <td><%=user.occupation%></td>
+  </tr>
+<% end %>
+</tbody>
+</table>
+</div>
