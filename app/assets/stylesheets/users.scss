@@ -19,3 +19,23 @@
     background-color: #04AA6D;
     color: white;
 }
+
+#form-container {
+    width: 300px;
+    height: 400px;
+    border: 2px solid black;
+    margin: auto;
+}
+
+#form-container h1 {
+    text-align: center;
+    margin-bottom: 20%;
+}
+
+.field-container {
+    margin-left: 20%;
+}
+
+.field-container .button {
+    background-color: black;
+}
