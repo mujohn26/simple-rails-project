@@ -1,0 +1,24 @@
+<div id="form-container">
+<h1>Users form</h1>
+
+<%= form_with model: @users do |form|%>
+<div class = 'field-container'>
+   <%= form.label :name%>
+   <%= form.text_field :name%>
+   <%@users.errors.full_messages_for(:name).each do |message|%>
+    <div><%=message%></div>
+   <%end%>
+    </div>
+ <div class='field-container'><br>
+   <%= form.label :occupation%>
+   <%= form.text_field :occupation%>
+    <%@users.errors.full_messages_for(:occupation).each do |message|%>
+    <div><%=message%></div>
+   <%end%>
+    </div><br>
+ <div class='field-container'>
+   <%= form.submit%>
+    </div>
+<%end%>
+
+</div>

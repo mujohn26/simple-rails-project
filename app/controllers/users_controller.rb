@@ -6,10 +6,8 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  # # GET /users/1 or /users/1.json`
   def show
-    @id = params[:id]
-    render :show2
+    @users = User.find(params[:id])
   end
 
   def users_by_name
@@ -21,12 +19,45 @@ class UsersController < ApplicationController
     @users = User.new
   end
 
+  def edit
+    @users = User.find(params[:id]) 
+  end
+
   def create
     @users = User.new(users_params)
     if @users.save
       redirect_to controller: 'users', action: 'index'
     else
       render :new
+    end
+  end
+
+  def update
+    @users = User.find(params[:id])
+    if(@users.update(users_params))
+      redirect_to controller: 'users', action: 'index'
+    else
+     render :edit
+    end
+  end
+
+  def confirm
+    @users = User.find(params[:id])
+  end
+
+  def destroy
+    @users = User.find(params[:id])
+    @users.destroy
+    redirect_to controller: 'users', action: 'index'
+  end
+
+  def destroy_multiple
+    users_ids = params[:user_ids]
+    if users_ids.nil?
+      render :error
+    else
+    User.destroy(users_ids)
+    redirect_to controller: 'users', action: 'index'
     end
   end
 

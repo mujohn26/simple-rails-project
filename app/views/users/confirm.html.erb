@@ -1,0 +1,8 @@
+<div class="confirm-page-container">
+<h3>Do you want to delete a user with name <%=@users.name%> ?</h3>
+<div>
+  <%= link_to "Yes", user_path(@users), method: :delete %>
+  <%= link_to 'Back', users_path %>
+</div>
+
+</div>

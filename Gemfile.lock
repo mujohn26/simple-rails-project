@@ -90,6 +90,8 @@ GEM
     faraday_middleware (0.14.0)
       faraday (>= 0.7.4, < 1.0)
     ffi (1.15.3)
+    font-awesome-sass (4.7.0)
+      sass (>= 3.2)
     gh (0.15.1)
       addressable (~> 2.4.0)
       backports
@@ -180,6 +182,11 @@ GEM
     regexp_parser (2.1.1)
     rexml (3.2.5)
     rubyzip (2.3.2)
+    sass (3.7.4)
+      sass-listen (~> 4.0.0)
+    sass-listen (4.0.0)
+      rb-fsevent (~> 0.9, >= 0.9.4)
+      rb-inotify (~> 0.9, >= 0.9.7)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
@@ -253,6 +260,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   dotenv-rails
+  font-awesome-sass (~> 4.7.0)
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pg

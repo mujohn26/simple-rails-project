@@ -2,8 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 #user-table {
-    width: 100%;
-    border-collapse: collapse
+    width: 70%;
+    border-collapse: collapse;
+    margin-left: 10%
 }
 
 #user-table td,
@@ -38,4 +39,51 @@
 
 .field-container .button {
     background-color: black;
+}
+
+.icons-container {
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.actions-header {
+    width: 100px;
+}
+
+.single-user-row {
+    cursor: pointer;
+}
+
+.user-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    margin-top: 2%
+}
+
+.delete-button {
+    margin-left: 5%;
+}
+
+.details div div {
+    display: flex;
+    flex-direction: row;
+}
+
+.single-user {
+    margin-left: 30%;
+    margin-top: 5%;
+}
+
+.confirm-page-container {
+    margin-left: 30%;
+    margin-top: 5%;
 }
