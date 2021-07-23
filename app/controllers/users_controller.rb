@@ -20,8 +20,10 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @users = User.find(params[:id]) 
+    @users = User.find(params[:id])
   end
+
+  def method_name; end
 
   def create
     @users = User.new(users_params)
@@ -32,12 +34,17 @@ class UsersController < ApplicationController
     end
   end
 
+  def multiple_display
+    @users = User.find(params[:ids])
+    @params = params
+  end
+
   def update
     @users = User.find(params[:id])
-    if(@users.update(users_params))
+    if @users.update(users_params)
       redirect_to controller: 'users', action: 'index'
     else
-     render :edit
+      render :edit
     end
   end
 
@@ -56,9 +63,14 @@ class UsersController < ApplicationController
     if users_ids.nil?
       render :error
     else
-    User.destroy(users_ids)
-    redirect_to controller: 'users', action: 'index'
+      redirect_to controller: 'users', action: 'multiple_display', :ids=>users_ids
     end
+  end
+
+  def delete_multiple
+    User.destroy(params[:format].split("/"))
+    redirect_to controller: 'users', action: 'index'
+
   end
 
   private

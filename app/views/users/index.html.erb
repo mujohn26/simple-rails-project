@@ -2,7 +2,7 @@
 <div>
 <%=form_tag destroy_multiple_users_path, method: :delete do%>
 <table id="user-table">
-<tr >
+<tr>
 <th></th>
 <th >Id</th>
 <th >Name</th>
@@ -17,18 +17,16 @@
   <td><%=user.name%></td>
   <td><%=user.occupation%></td>
   <td class='icons-container'>
-   <div>
+  <div>
   <%= link_to image_tag('user.png', height:20, width:20), user %>
   </div>
-  <div >
- <%= link_to image_tag('edit.png', height:20, width:20), edit_user_path(user) %>
+  <div>
+  <%= link_to image_tag('edit.png', height:20, width:20), edit_user_path(user) %>
   </div>
-
   <div>
   <%= link_to image_tag('delete.png', height:20, width:20), "/users/confirm/#{user.id}" %>
   </div>
   </td>
- 
   </tr>
 <% end %>
 </tbody>
